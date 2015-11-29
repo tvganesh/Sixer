@@ -44,7 +44,8 @@ shinyServer(function(input, output,session) {
             selectInput('batsman', 'Choose batsman',choices=player,selected=input$batsman)
         })
         output$batsmanFunctionList = renderUI({
-            selectInput('batsmanFunc', 'Choose chart type',choices=f,selected=input$batsmanFunc)
+            selectInput('batsmanFunc', 'Choose chart type',choices=f,selected=input$batsmanFunc,
+                        selectize=FALSE, size=12)
         })
         
         # Call the plots for the batsman
@@ -73,7 +74,8 @@ shinyServer(function(input, output,session) {
             selectInput('bowler', 'Choose bowler',choices=player,selected=input$bowler)
         })
         output$bowlerFunctionList = renderUI({
-            selectInput('bowlerFunc', 'Choose chart type',choices=f1,selected=input$bowlerFunc)
+            selectInput('bowlerFunc', 'Choose chart type',choices=f1,selected=input$bowlerFunc,
+                        selectize=FALSE, size=8)
         })
         
         analyzeBowler(input$bowler,input$bowlerFunc,input$matchType1)
