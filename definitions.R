@@ -23,8 +23,8 @@ funcs <- c("4s of batsman",
            "Batsman's Moving Average",
            'Batsman Perf. Forecast',
            "Batsman Runs Likelihood est.",
-           "Batsman Perf. 3-D",
-           "Check batsman in-form status")
+           #"Check batsman in-form status,"
+           "Batsman Perf. 3-D")
 
 # Function names for ODI & Twenty20 batsman analysis
 funcsODITT <- c("4s of batsman",
@@ -42,8 +42,9 @@ funcsODITT <- c("4s of batsman",
                 "Batsman's Moving Average",
                 'Batsman Perf. Forecast',
                 "Batsman Runs Likelihood est.",
-                "Batsman Perf. 3-D",
-                "Check batsmanI in-form status")
+                #"Check batsmanI in-form status",
+                "Batsman Perf. 3-D")
+               
 
 # Function names for Test bowler analysis
 funcs1 <- c("Bowler's Wickets-Runs plot",
@@ -55,8 +56,9 @@ funcs1 <- c("Bowler's Wickets-Runs plot",
             "Bowler's Economy Rate",
             "Bowler's Moving Average",
             "Bowler's Perf. Forecast",
-            #"bowlerWktRateTT",
-            "Check Bowler Form status")
+            #"Check Bowler Form status",
+            "bowlerWktRateTT")
+            
 
 # Function names for ODI bowler analysis
 funcs1ODI <- c("Bowler's Wickets-Runs plot",
@@ -65,8 +67,9 @@ funcs1ODI <- c("Bowler's Wickets-Runs plot",
                  "Bowler's Avg Wicket against opposition",
                  "Bowler's Economy Rate",
                  "Bowler's Moving Average",
-                 "Bowler's Perf. Forecast",
-                 "Check Bowler Form status")
+                 #"Check Bowler Form status",
+                 "Bowler's Perf. Forecast")
+                
 
 # Function names for Twenty20 bowler analysis
 funcs1TT <- c("Bowler's Wickets-Runs plot",
@@ -76,8 +79,9 @@ funcs1TT <- c("Bowler's Wickets-Runs plot",
                "Bowler's Economy Rate",
                "Bowler's Moving Average",
                "Bowler's Perf. Forecast",
-               "Bowler Wicket Rate",
-               "Check Bowler Form status")
+               #"Check Bowler Form status",
+               "Bowler Wicket Rate")
+               
 
 
 # Name of Test Batsman
