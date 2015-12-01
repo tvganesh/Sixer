@@ -96,7 +96,6 @@ shinyUI(navbarPage("cricketr analyzes Cricketers!",
                            )    
                            
                   ),
-                  # Relative bowlers plot
                   tabPanel("Relative performance of bowlers",
                            # Application title
                            titlePanel("Relative performance of bowlers"),
@@ -125,6 +124,43 @@ shinyUI(navbarPage("cricketr analyzes Cricketers!",
                            )    
                            
                   ),
+                  # Tab for In-Form status for both batsman & bowler
+                  tabPanel("In-form status",
+                           
+                           titlePanel("In form status"),
+                           
+                           fluidRow(
+                               column(3,
+                                      radioButtons("matchType5", label = h3("Match type"),
+                                                   choices = list("Test" = "Test",
+                                                                  "ODI" = "ODI", 
+                                                                  "Twenty20" = "TT"), 
+                                                   inline=TRUE,
+                                                   selected = "Test"),
+                                      radioButtons("playerType", label = h3("PlayerType"),
+                                                   choices = list("Batsman" = "Batsman",
+                                                                  
+                                                                  "Bowler" = "Bowler"), 
+                                                   inline=TRUE,
+                                                   selected = "Batsman"),
+                                      uiOutput("playerList")
+                                      
+                               ),
+                               
+                               # Show a plot of the generated distribution        
+                               column(6,
+                                      verbatimTextOutput("status")
+                                      #plotOutput("relBowlersPlot")
+                               ),
+                               column(7, offset=4,
+                                      tags$h5((tags$i("Designed and developed by Tinniam V Ganesh"))),
+                                      tags$h5((tags$i("Nov 28,2015"))),
+                                      tags$h6("Data source ESPN Cricinfo: http://stats.espncricinfo.com/ci/engine/stats/index.html")
+                               )
+                           )    
+                           
+                  ),
+               
                    tabPanel("About",
                   h2("Sixer - cricketr's Shiny avatar"),
                   p("This Shiny app is based on the R package 'cricketr'. In this Shiny app, I use  the

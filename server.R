@@ -17,6 +17,7 @@ source("analyzeBowler.R")
 source("relBatsmenPerf.R")
 source("relBowlersPerf.R")
 source("definitions.R")
+source("checkInForm.R")
 
 
 shinyServer(function(input, output,session) {
@@ -138,6 +139,51 @@ shinyServer(function(input, output,session) {
             
             relBowlersPerf(input$bowlers,input$bowlersFunc,input$matchType4)
         }
+        
+        
+    })
+    
+    # Check the form of the player and display text
+    output$status <- renderText({
+        
+        if(input$playerType == "Batsman"){
+            if(input$matchType5 == "Test"){
+                player = testBatsman
+                
+            } else if(input$matchType5 == "ODI"){
+                player = odiBatsman
+                
+            }
+            else {
+                player = ttBatsman
+                
+            }
+        } else if (input$playerType == "Bowler"){
+            if(input$matchType5 == "Test"){
+                player = testBowler
+                
+            } else if(input$matchType5== "ODI"){
+                player = odiBowler
+                
+            }
+            else {
+                player = ttBowler
+                
+            }
+        }
+        # Dynamic list update. Set the selected so that it does not flip to the first!!
+        output$playerList = renderUI({
+            selectInput('player', 'Choose player',choices=player,selected=input$player)
+        })
+        cat("aaa",input$player)
+        a <- checkInForm(input$matchType5,input$playerType,input$player)
+        
+        #if(input$playerType == "Batsman"){
+        #a = checkBatsmanInForm("./data/test/batsman/tendulkar.csv","Tendulkar")
+        
+        #}
+        print(a)
+        
         
         
     })
