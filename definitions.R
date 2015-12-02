@@ -93,7 +93,7 @@ testBatsman <- c("Sachin Tendulkar","Rahul Dravid","Ricky Ponting","Kumar Sangak
 
 # Name of ODI batsmen
 odiBatsman <- c("A B Devilliers","Chris Gayle","Virender Sehwag","Glenn Maxwell",
-                'Kris Srikkanth',"Virat Kohli","Rohit Sharma","Kapil Dev",
+                'Kris Srikkanth',"Virat Kohli","Rohit Sharma","Kapil Dev", "M S Dhoni",
                 "Shahid Afridi","Ahmed Shezad","Misbah Ul Haq",
                 "Darren Bravo","Dwayne Bravo",
                 "T M Dilshan","ST Jayasuriya",
